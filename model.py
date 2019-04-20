@@ -12,5 +12,5 @@ class DenoisingAutoencoder(nn.Module):
 
     def forward(self, x):
         encoded = F.relu(self.encoder(x))
-        decoded = F.sigmoid(self.decoder(encoded))
+        decoded = torch.sigmoid(self.decoder(encoded))
         return decoded
